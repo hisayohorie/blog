@@ -84,7 +84,6 @@ GEM
       pathutil (~> 0.9)
       rouge (~> 1.7)
       safe_yaml (~> 1.0)
-    jekyll-athena (0.0.2)
     jekyll-avatar (0.4.2)
       jekyll (~> 3.0)
     jekyll-coffeescript (1.0.1)
@@ -181,14 +180,14 @@ GEM
     sawyer (0.8.1)
       addressable (>= 2.3.5, < 2.6)
       faraday (~> 0.8, < 1.0)
-    terminal-table (1.7.3)
-      unicode-display_width (~> 1.1.1)
+    terminal-table (1.8.0)
+      unicode-display_width (~> 1.1, >= 1.1.1)
     thread_safe (0.3.6)
     typhoeus (0.8.0)
       ethon (>= 0.8.0)
     tzinfo (1.2.3)
       thread_safe (~> 0.1)
-    unicode-display_width (1.1.3)
+    unicode-display_width (1.2.1)
 
 PLATFORMS
   ruby
@@ -196,7 +195,6 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll (= 3.4.3)
-  jekyll-athena
   jekyll-feed (~> 0.6)
   tzinfo-data
 
