@@ -6,12 +6,12 @@ categories: Outreachy
 ---
 
 <h2>The First Day</h2>
-May 30th, 2017 was the first day of my Outreachy internship with OpenAustralia Foundation. I started by having a video chat meeting with my mentors Luke and Henare, which we mostly spent getting to know each other, then I spent the following day prepping for the official kick-off meeting on day three.
+<p>May 30th, 2017 was the first day of my Outreachy internship with OpenAustralia Foundation. I started by having a video chat meeting with my mentors Luke and Henare, which we mostly spent getting to know each other, then I spent the following day prepping for the official kick-off meeting on day three.</p>
 
 <h2>The Project</h2>
-Local Councillors Project (suggestions for a cooler name are welcome) is the project I will be working on for the next three months. This project is closely related to <a href="https://www.planningalerts.org.au/">PlanningAlerts</a>, which is an app that allows people to sign up for email notifications when there are new development applications in the area of their concern. Through PlanningAlerts users can also communicate with local councillors about these development proposals. Information about the local councillors is currently imported from a public spreadsheet that gets maintained  by dedicated volunteers. The issue in current system is that in order for PlanningAlerts to import this local councillor data, it first needs to be converted from CVS to JSON, which requires someone to run a rake task from the terminal. This is not an easy task for volunteers who may not have programming knowledge, and is a lot to ask on top of their work gathering local councillor information that is scattered in all over the internet. That’s where the Local Councillors Project comes in. We want to create a system that makes it easier and more accessible for people to contribute data, so that other apps like PlanningAlerts can access the data of Local Councillors.
+<p>Local Councillors Project (suggestions for a cooler name are welcome) is the project I will be working on for the next three months. This project is closely related to <a href="https://www.planningalerts.org.au/">PlanningAlerts</a>, which is an app that allows people to sign up for email notifications when there are new development applications in the area of their concern. Through PlanningAlerts users can also communicate with local councillors about these development proposals. Information about the local councillors is currently imported from a public spreadsheet that gets maintained  by dedicated volunteers. The issue in current system is that in order for PlanningAlerts to import this local councillor data, it first needs to be converted from CVS to JSON, which requires someone to run a rake task from the terminal. This is not an easy task for volunteers who may not have programming knowledge, and is a lot to ask on top of their work gathering local councillor information that is scattered in all over the internet. That’s where the Local Councillors Project comes in. We want to create a system that makes it easier and more accessible for people to contribute data, so that other apps like PlanningAlerts can access the data of Local Councillors.</p>
 
-In the kick-off meeting we mapped out issues, solutions, and design principles. This is a new process for me, and was a very interesting and meaningful experience to take part in. <a href="https://github.com/openaustralia/australian_local_councillors_popolo/issues/98">Here</a> is what we came up with:
+<p>In the kick-off meeting we mapped out issues, solutions, and design principles. This is a new process for me, and was a very interesting and meaningful experience to take part in. <a href="https://github.com/openaustralia/australian_local_councillors_popolo/issues/98">Here</a> is what we came up with:<p/>
 
 <h3>The Problem</h3>
 <ol>
@@ -24,7 +24,7 @@ In the kick-off meeting we mapped out issues, solutions, and design principles. 
 
 <h3>We know we will have solved the problem when...</h3>
 
-PlanningAlerts has up-to-date councillor information for every authority it covers. This information is updated by the contributions of volunteers. We have an accessible, easy (and fun) system to update/add councillor information that acknowledges and celebrates the work of the volunteers.
+<p>PlanningAlerts has up-to-date councillor information for every authority it covers. This information is updated by the contributions of volunteers. We have an accessible, easy (and fun) system to update/add councillor information that acknowledges and celebrates the work of the volunteers.</p>
 
 <h3>Design Principles</h3>
 
@@ -51,24 +51,24 @@ PlanningAlerts has up-to-date councillor information for every authority it cove
 
 <h2>What I’ve Learned Through the Process</h2>
 
-I come from a background in community organizing, art-based education and facilitation, which makes it a big leap for me to be a developer.  It is certainly very different, but through this process I could find some similarities between these different types of work. So I am writing this section to reflect, learn and digest in my own way.
-Two things I found difficult and valuable to learn were 1) how to break down a big issue into a set of small issues that deal with one thing at a time and 2) categorizing what goes where.
+<p>I come from a background in community organizing, art-based education and facilitation, which makes it a big leap for me to be a developer.  It is certainly very different, but through this process I could find some similarities between these different types of work. So I am writing this section to reflect, learn and digest in my own way.
+Two things I found difficult and valuable to learn were 1) how to break down a big issue into a set of small issues that deal with one thing at a time and 2) categorizing what goes where.</p>
 
 <h3>Breaking Down Complex Issues</h3>
 
-When we were nailing down the problem, one thing I found unfamiliar, challenging, and refreshing was compartmentalizing a big problem to a set of individual issues.
-In the past the way I worked as a facilitator was closer to creating an unordered list as opposed to an ordered list. As a facilitator I was trained to focus on the interconnection of issues and the dynamics among them rather than considering single issues in isolation. I can see both approaches are relevant in different contexts, but it took me a while to wrap my head around, and it still takes time for me to break things down to single issues.
+<p>When we were nailing down the problem, one thing I found unfamiliar, challenging, and refreshing was compartmentalizing a big problem to a set of individual issues.</p>
+<p>In the past the way I worked as a facilitator was closer to creating an unordered list as opposed to an ordered list. As a facilitator I was trained to focus on the interconnection of issues and the dynamics among them rather than considering single issues in isolation. I can see both approaches are relevant in different contexts, but it took me a while to wrap my head around, and it still takes time for me to break things down to single issues.</p>
 
 <h3>Categorizing the Planning Process</h3>
 
-This is related to breaking down a big problem into a set of small single issues.  When we were creating the design principles for this project, I was constantly conflating design principles and solutions. Design principles should act as a bridge between a problem and a solution, so they are connected yet not the same thing. Again this challenge was rooted in breaking down the complicated process of planning a project that aims to solve a complex problem.
-The “How We Work” section was originally part of my draft for the project’s design principles.  My mentors’ feedback was that these points wouldn’t traditionally be categorized design principles since they are more about how we run the project, and less about guiding design decisions within the project.  However, we all agreed that it was important to document these ideas somewhere, which lead to the introduction of a “How We Work” section
-Both cases were great practice with applying computational thinking in real life scenarios. It helped me connect what I already know to this big new tech project.
+<p>This is related to breaking down a big problem into a set of small single issues.  When we were creating the design principles for this project, I was constantly conflating design principles and solutions. Design principles should act as a bridge between a problem and a solution, so they are connected yet not the same thing. Again this challenge was rooted in breaking down the complicated process of planning a project that aims to solve a complex problem.<p>
+<p>The “How We Work” section was originally part of my draft for the project’s design principles.  My mentors’ feedback was that these points wouldn’t traditionally be categorized design principles since they are more about how we run the project, and less about guiding design decisions within the project. However, we all agreed that it was important to document these ideas somewhere, which lead to the introduction of a “How We Work” section</p>
+<p>Both cases were great practice with applying computational thinking in real life scenarios. It helped me connect what I already know to this big new tech project.</p>
 
 <h3>Design Principles as a Collective Agreement</h3>
 
-Before the kick-off meeting, Luke gave me a whole bunch of readings about design principles. Since I chose this project in the internship application, I was familiar with the issue we want to solve and had an abstract understanding of the solution (i.e. to build an app). But I never really knew what “design principles: meant in this context, and I had assumed it was probably about graphic design and the aesthetics of the project, but it turned out to be about design in a much bigger sense: how to communicate with users, and how to reach the goal of the project.
-I’ve come to understand design principles as something similar to the idea of a collective agreement that I’m familiar with through my background in workshop facilitation A collective agreement is something that all workshop participants and facilitators create together at the very beginning of a workshop. It is a set of agreements designed to maximize the participants’ learning in the space and collectively move towards their goals. Some questions to ask when developing a collective agreement are:
+<p>Before the kick-off meeting, Luke gave me a whole bunch of readings about design principles. Since I chose this project in the internship application, I was familiar with the issue we want to solve and had an abstract understanding of the solution (i.e. to build an app). But I never really knew what “design principles" meant in this context, and I had assumed it was probably about graphic design and the aesthetics of the project, but it turned out to be about design in a much bigger sense: how to communicate with users, and how to reach the goal of the project.<p>
+<p>I’ve come to understand design principles as something similar to the idea of a collective agreement that I’m familiar with through my background in workshop facilitation A collective agreement is something that all workshop participants and facilitators create together at the very beginning of a workshop. It is a set of agreements designed to maximize the participants’ learning in the space and collectively move towards their goals. Some questions to ask when developing a collective agreement are:</p>
 
  <ul>
    <li>What makes you feel safe(r)?</li>
@@ -77,7 +77,7 @@ I’ve come to understand design principles as something similar to the idea of 
    <li>and more</li>
  </ul>
 
-And some of the actual agreements to respond to those questions are:
+<p>And some of the actual agreements to respond to those questions are:</p>
 
 <ul>
   <li>Speak on your behalf (use “I” statements).</li>
@@ -88,33 +88,33 @@ And some of the actual agreements to respond to those questions are:
   <li> and more</li>
 </ul>
 
-Learning is often times rocky, and there are moments we feel lost, sidetracked, misunderstood, and divided. But we need those moments to actually learn. A collective agreement is something to come back to in those moments, to help people remember their common ground and build from there each time.
+<p>Learning is often times rocky, and there are moments we feel lost, sidetracked, misunderstood, and divided. But we need those moments to actually learn. A collective agreement is something to come back to in those moments, to help people remember their common ground and build from there each time.</p>
 
 <h3>Power Imbalance</h3>
 
-Some of the issues we want to address in this project include:
+<p>Some of the issues we want to address in this project include:</p>
 <ul>
   <li>The current system requires a lot of programming knowledge to contribute the data. People don’t even know they can update the data.</li>
   <li>Very few people are able to make contribution, and so very few people do.</li>
-
-  Those points indicate the barrier for the participation in civic tech and civic participation in city planning. To challenge that, we are trying to make civic participation easier and more accessible. So we need to center users by asking about their experiences, where they are coming from and what their needs are.
 </ul>
+  <p>Those points indicate the barrier for the participation in civic tech and civic participation in city planning. To challenge that, we are trying to make civic participation easier and more accessible. So we need to center users by asking about their experiences, where they are coming from and what their needs are.</p>
 
-This is similar to what a facilitator should do in a group session: strive to be instrumental in centering participants’ needs to feel safe to express their ideas, feelings, and concerns, and to explore those together.
-As much as a facilitator should be instrumental, it is important to remember they are a part of the group together, and everybody is sharing the process. It is convenient to believe facilitators are purely instrumental. However, a facilitator holds unique power, and have to try hard to minimize the hierarchy of power that exists between them and participants. Pretending like it doesn’t exist gives facilitators power they don’t have to be accountable for. Similarly, when it comes to the data that drives PlanningAlerts, people with programming knowledge hold the power. I want this project to reduce the division that power creates between people with programming knowledge and those without.  
+
+<p>This is similar to what a facilitator should do in a group session: strive to be instrumental in centering participants’ needs to feel safe to express their ideas, feelings, and concerns, and to explore those together.</p>
+<p>As much as a facilitator should be instrumental, it is important to remember they are a part of the group together, and everybody is sharing the process. It is convenient to believe facilitators are purely instrumental. However, a facilitator holds unique power, and have to try hard to minimize the hierarchy of power that exists between them and participants. Pretending like it doesn’t exist gives facilitators power they don’t have to be accountable for. Similarly, when it comes to the data that drives PlanningAlerts, people with programming knowledge hold the power. I want this project to reduce the division that power creates between people with programming knowledge and those without.  </p>
 
 <h3>Why does it matter <i>how</i> we build, not only <i>what</i> we build? </h3>
 
-Since we are building things to make civic participation more accessible, it is important to acknowledge we are also participants in civic tech, and how we treat each other matters. We worship efficiency so much, and end up building something great but with a terrible process.  This could include a lack of transparency, bad communication, dismissing the safety or violating the privacy of users and workers. Can we still create something great if our process is terrible? Probably we can. But if what we want to achieve through this project or through the civic tech movement overall is to empower <i>all</i> people through technology, it defeats the purpose. Especially once our design principles say:
+<p>Since we are building things to make civic participation more accessible, it is important to acknowledge we are also participants in civic tech, and how we treat each other matters. We worship efficiency so much, and end up building something great but with a terrible process.  This could include a lack of transparency, bad communication, dismissing the safety or violating the privacy of users and workers. Can we still create something great if our process is terrible? Probably we can. But if what we want to achieve through this project or through the civic tech movement overall is to empower <i>all</i> people through technology, it defeats the purpose. Especially once our design principles say:</p>
 
 <ul>
  <li>Strive for diversifying data: invite people who are historically marginalized and excluded from conversations around technology and information, and intentionally build data structures that reflect those voices and lived experiences.</li>
 </ul>
 
- How we build matters as much as what we build, because the process of building is already a part of diversifying data.</li>
+ <p>How we build matters as much as what we build, because the process of building is already a part of diversifying data.<p>
 
 <h2>In Conclusion</h2>
 
-I’m so proud of our design principles! Also it has been pretty useful guide for us.  
+<p>I’m so proud of our design principles! Also it has been pretty useful guide for us.  
 My next post, which I should be writing already, will be about diagramming our user flow and solution design.  
-Anyhow, that’s it for now!
+Anyhow, that’s it for now!</p>
