@@ -93,11 +93,12 @@ Learning is often times rocky, and there are moments we feel lost, sidetracked, 
 <h3>Power Imbalance</h3>
 
 Some of the issues we want to address in this project include:
+<ul>
+  <li>The current system requires a lot of programming knowledge to contribute the data. People don’t even know they can update the data.</li>
+  <li>Very few people are able to make contribution, and so very few people do.</li>
 
-The current system requires a lot of programming knowledge to contribute the data. People don’t even know they can update the data.
-Very few people are able to make contribution, and so very few people do.
-
-Those points indicate the barrier for the participation in civic tech and civic participation in city planning. To challenge that, we are trying to make civic participation easier and more accessible. So we need to center users by asking about their experiences, where they are coming from and what their needs are.
+  Those points indicate the barrier for the participation in civic tech and civic participation in city planning. To challenge that, we are trying to make civic participation easier and more accessible. So we need to center users by asking about their experiences, where they are coming from and what their needs are.
+</ul>
 
 This is similar to what a facilitator should do in a group session: strive to be instrumental in centering participants’ needs to feel safe to express their ideas, feelings, and concerns, and to explore those together.
 As much as a facilitator should be instrumental, it is important to remember they are a part of the group together, and everybody is sharing the process. It is convenient to believe facilitators are purely instrumental. However, a facilitator holds unique power, and have to try hard to minimize the hierarchy of power that exists between them and participants. Pretending like it doesn’t exist gives facilitators power they don’t have to be accountable for. Similarly, when it comes to the data that drives PlanningAlerts, people with programming knowledge hold the power. I want this project to reduce the division that power creates between people with programming knowledge and those without.  
