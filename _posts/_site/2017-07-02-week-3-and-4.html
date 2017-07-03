@@ -1,0 +1,70 @@
+<h2>Week 2-4</h2>
+<p>One third of the internship is already passed! It was a packed 2 weeks. We finally started to write code, and it is exciting. We spend a fair amount of time thinking though the foundation of this project before we start to building things. As my previous post, we made design principles. In the week 2, we started to draft user flow.</p>
+
+<h2>User flow: First draft</h2>
+<p><img src="../img/user_flow.png" /></p>
+<p>From the drafting of the first draft, it became clear that it makes sense to have PlanningAlerts to be the entry point to the contribution of suggested councilor data.  We decided to focus on the part of the contributor’s flow as the first iteration, and looked more closely in the potential entry points in the PlanningAlerts.</p>
+
+<h2>Entry points</h2>
+<p><img src="../img/entry_points_chart2.png" /></p>
+<p>Once we decided to focus on the contributor side of the user flow, we created a chart of potential entry points in the PlanningAlerts.  I went though the process of signing up for email alerts, commenting on proposal on PlanningAlerts numbers of times to tune into the user’s state of mind. From the chart, we picked top 3 entry points, and moved on to the development of the first iteration. I do not have background in UX design, and this was my first experience of drafting user flow and entry points</p>
+
+<h2>First iteration milestone</h2>
+
+<p>As we focused on the contributor side of the user flow first, we are taking “wizard of OZ” approach; having the interface for the users first, then manually inputing the data we received in the existing system that feeds data to PlanningAlerts. In this way, it is more work for administrators, yet we will be able to receive feedback of the UX from users side without building entire thing.
+<a href="https://github.com/openaustralia/planningalerts/milestone/7">And here is our milestone.</a> </p>
+<ul>
+  <li>Make sure people know which council they’re adding councilors to when they’re contributing</li>
+  <li>Add feature flag for the councilor info contribution feature</li>
+  <li>Councillor info contributor privydes their details so the admin can contact them about their contribution and thank them</li>
+  <li>Help people collect councilor information by provident them some instructions on where to get it</li>
+  <li>When someone contributes councilor information thank them and provide an experience that fits our principles</li>
+  <li>Let me add all the councilors for an authority in one contribution</li>
+  <li>Add basic styles to the councilor contribution form</li>
+</ul>
+
+<p>So far we are about 30% done, and aiming to achieve the milestone by the end of June.</p>
+
+<h2>What I’ve learned through the process</h2>
+
+<h3>Computational Thinking (again)</h3>
+
+<p>When I was drafting the userflow, what I spent the a lot of time was breaking down everything in small and clear steps. At this point, I am very certain that computational thinking will be have a key presence in every aspect of development, and amazed how it extends beyond just coding.  Rather, I am realizing that coding (or good coding) can happen because everything else is thought through, broken down to single issues, and mapped out clearly. I came to understand being agile better because I came to understand the context where the good code can be written.</p>
+
+<h3>Coming to understand what it’s like being agile and why it’s important</h3>
+
+<p>I see the word “Agile” pretty much anywhere when I see job postings for coding jobs (Continuous shipping, readjustment, short phases of work etc. ). It makes sense to wanting to be flexible, but I was not paying attention to why it needs to be so emphasized till it manifests in the context of a real life project.</p>
+<p>When we want to achieve an user-centric design, user-feedback is crucial in the development process, and we have to create the development flow that enable taking in constant user feedback. When we center that taking in a lot of user feedback fast, it significantly affects the way we work. We have to consciously create a workflow that is open, flexible and adaptive to change.  Some of the points being agile are:</p>
+<ul>
+  <li>in the existing flow if we made one new component, the flow still works</li>
+  <li>and the components are reusable, and immediately useful</li>
+  <li>reuse things that already exist</li>
+</ul>
+
+<p>In short, yes, Agile makes so much sense to get user feedback fast , and enable the user-centric design. To meet our design principle, agile is the way to go. Although it maybe different in a bigger team of developers, I am learning that creating an application involves a lot more than just writing code. I am learning agile as a way to create a condition for good code to be written.</p>
+
+<h3>Empathy is a big skill for Developer</h3>
+<p>I’ve been thinking about what entails to be agile, and I am certain empathy plays critical role. I am very fortunate to learn it as a positive reflection, because I know it is rare.</p>
+<p>Empathy plays out in two folds: empathy towards users as community member, and empathy among coworkers. Being able to tune in to user’s needs, circumstances, and feelings are important to create technology that truly benefit all community members.</p>
+<p>And for a team of developers, empathy is a glue to connect us in the way we can function well to be agile. It’s so much easier to work with this team in spite of the time difference coordination, and maximize my learning. Luke and Henare both are very encouraging, supportive, communicative, and great at holding space for me to learn. Before I started this internship, I witnessed and experienced a lot of shaming associated to coding.</p>
+<p>When I was in just learning to code, even though it was my choice,  I felt I know nothing and hated myself for it. It felt like I am a failure, and felt ashamed of it. I was encouraged to ask questions, but after a few times of being shamed for asking questions, I spent more energy finding who I can ask questions than actually asking questions. The fear of being shamed and undermined can move people, but it only goes so far. And most certainly, the fear cannot force us to be empathetic.</p>
+<p>Now I still feel like I know nothing, and I know it’s true. Even though that makes me frustrated but I can also feel the excitement of learning new things. And that makes me want to learn more. When we want to achieve what we hold as a goal, the fastest way to get there is tune in out empathy.  Being empathetic is a conscious decision. When being agile is described as “being flexible, adaptive, fast turnover of short phases” etc.,  I think it’s important to state empathy as a foundational value and tangible skill to make agile possible.</p>
+
+<h3>Test Driven Development</h3>
+
+<p>I was always afraid of writing tests, and this past 2 weeks changed how I see test 180 degree.
+In the first issue I worked on, I spent a long time thinking what exactly the issue I have to work on. I drafted some user flows, associations, and ended up creating a model that was not really necessarily.  The first things I should have done was to read the test written for the issue and run the test. So it will fails and the error messages will guide me to what to write. And that came to me as such a shock because I rarely wrote test before, and it really changed my way of approaching development.</p>
+<p>In the past project, writing code is an agonizing process. It’s feels like facing a blank canvas and not knowing what to draw or where to start. I always respected people who can write code from scratch, and wondered how am I suppose to just magically know what to write. TDD demystified the process. Although writing test first felt counter intuitive, when we think test as a way to communicate the shared vision and goal, test becomes a powerful tool.</p>
+
+<p>When conceptual thought move towards practical implementation, not limited to coding, it always feels like to me a pivot of a twisted textile.
+<img src="../img/time.png" />
+The pivot is the moment of transformation that the same idea changes the way of manifestation. For me, test in development is the pivot. It reminds me of translation (Japanese is my mother tongue, and I learned English as an adult). In Japanese we traditionally write vertically, and there is a moment in translation, I feel physically picking up the line and laying it down to be horizontal, like how English is written.
+I remember when I felt that link, it is one of the moments I felt like I understand translation better.</p>
+<p>I think test is the link between ideas and implementation, and when I realize that, coding came to seem less scary because there is a test to guide me. Good test communicate the idea of the feature it testing clearly. And there is a feature that looks impossible to write a test for, then it is probably a bad implementation of the idea.</p>
+<p>It is a bit premature to say test is my new best friend, but I want to know it better. Now, one of my tangible goals in this internship is to familiarize myself in test and be able to write better tests.</p>
+
+<h2>Conclusion, and a bit more thoughts</h2>
+
+<p>I am learning a lot and it is exciting. It feels good to be coding, and now I know that development involves so much more than just coding. I am glad to know the processs, so I can acknowledge and appreciate the labor put into to create a condition to code.</p>
+<p>We are almost done of the first iteration, and will have a phase of user feedback. I’m excited to hear what user thinks, and so grateful that we can have this process!</p>
+<p>All of these tools are very exciting to learn. Although I cannot stop wondering, with all these amazing tools, why tech industry is still struggling to make itself a better place? ( I mean, I think I know why, but asking as a rhetoric). By better, I mean a place to cerebrate the difference and diversity -not in the cherry picking curation of diversity™  way, but truly open, shared, nurturing way. Because everything I have learned in this internship points me to that we already have tools to learn from each other, being adoptive and change ourselves to be better to each other. Why can’t we think about using these amazing tools to improve our environment, lift each other up? I will keep thinking about this, and I would love to connect with people who are working to make tech industry and community more inclusive, welcoming and nurturing place. </p>
