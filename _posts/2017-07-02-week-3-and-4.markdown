@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Week 3-4"
+title:  "Week 3 and 4"
 date:   2017-07-02 00:00:00 -0400
 categories: Outreachy
 ---
@@ -8,7 +8,7 @@ categories: Outreachy
 
 <h2>User flow: First draft</h2>
 <img src="/img/user_flow.png">
-<p>From the drafting of the first draft, it became clear that it makes sense to have PlanningAlerts to be the entry point to the contribution of suggested councilor data.  We decided to focus on the part of the contributor’s flow as the first iteration, and looked more closely in the potential entry points in the PlanningAlerts.</p>
+<p>From the drafting of the first draft, it became clear that it makes sense to have PlanningAlerts to be the entry point to the contribution of suggested councillor data.  We decided to focus on the part of the contributor’s flow as the first iteration, and looked more closely in the potential entry points in the PlanningAlerts.</p>
 
 <h2>Entry points</h2>
 <img src="/img/entry_points_chart2.png">
@@ -62,7 +62,7 @@ In the first issue I worked on, I spent a long time thinking what exactly the is
 <p>In the past project, writing code is an agonizing process. It’s feels like facing a blank canvas and not knowing what to draw or where to start. I always respected people who can write code from scratch, and wondered how am I suppose to just magically know what to write. TDD demystified the process. Although writing test first felt counter intuitive, when we think test as a way to communicate the shared vision and goal, test becomes a powerful tool.</p>  
 
 <p>When conceptual thought move towards practical implementation, not limited to coding, it always feels like to me a pivot of a twisted textile.</p>
-<img src="{{ site.baseurl }}/path/to/img/time.png">
+<img src="{{ site.baseurl }}/img/time.png">
 <p>The pivot is the moment of transformation that the same idea changes the way of manifestation. For me, test in development is the pivot. It reminds me of translation (Japanese is my mother tongue, and I learned English as an adult). In Japanese we traditionally write vertically, and there is a moment in translation, I feel physically picking up the line and laying it down to be horizontal, like how English is written.
 I remember when I felt that link, it is one of the moments I felt like I understand translation better.</p>
 <p>I think test is the link between ideas and implementation, and when I realize that, coding came to seem less scary because there is a test to guide me. Good test communicate the idea of the feature it testing clearly. And there is a feature that looks impossible to write a test for, then it is probably a bad implementation of the idea.</p>
