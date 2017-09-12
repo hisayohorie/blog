@@ -15,7 +15,7 @@ categories: Outreachy
 
 <p>As I mentioned in the previous blog post, there were a couple of weeks when I was not in close touch with my supervisors. I was working on a couple of issues. One was to contribute information about multiple councillors at once.</p>
 
-<img src ="img/multiple_contribution.png">
+<img src ="{{ site.baseurl }}/img/multiple_contribution.png">
 
 <p>First I was looking into the gem called cocoon that enables adding nested forms. We ended up not using this gem because it is javascript dependent, and we wanted to create the form that works in the environment where javascript is not enabled.</p>
 <p>Second, I created a form that uses #edit and #update controller actions. The idea is that every time the user is clicking the “Add more councillor info” button, it makes an edit request for the submission they are making, and adds more councillor information.  To me it felt like the simplest thing to do at the moment, but in reality, the controller is bouncing the submission back and forth between #edit and #update, and at one point it gets too confusing.</p>
@@ -41,7 +41,7 @@ That is one context. I call it an issue A.</p>
 
 <p>This is the disaster in making diagram:</p>
 
-<img src="img/gitdisaster.png">
+<img src="{{ site.baseurl }}/img/gitdisaster.png">
 
 
 <h2>Lessons learnt:</h2>
