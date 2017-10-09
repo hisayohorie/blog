@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>blog@hisayo</title>
-  <meta name="description" content="A cat with wet paws.">
+  <title>Week 5 and 6</title>
+  <meta name="description" content="This going to be a short post. I slacked off writing blog posts for a few weeks. Although now I am finally writing it, there is something good about letting ...">
   <link rel="shortcut icon" type="image/png" href="img/pinkcat.png">
   <link rel="stylesheet" href="/blog/assets/main.css">
-  <link rel="canonical" href="/blog/">
+  <link rel="canonical" href="/blog/outreachy/2017/07/16/week-5-and-6.html">
   <link rel="alternate" type="application/rss+xml" title="blog@hisayo" href="/blog/feed.xml">
 
   
@@ -60,74 +60,54 @@
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Week 5 and 6</h1>
+    <p class="post-meta">
+      <time datetime="2017-07-16T00:00:00-04:00" itemprop="datePublished">
+        
+        Jul 16, 2017
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>This going to be a short post. I slacked off writing blog posts for a few weeks. Although now I am finally writing it, there is something good about letting time pass so I can reflect on what I was doing/thinking/feeling at that time. That is being said, I am writing these posts in retrospect.</p>
+
+<p>In the week 5, things went a bit slow. Both of my supervisors took some time off, and the time we could communicate drastically decreased.</p>
+
+<p>From talking to people and my own work experiences outside of development, I am learning that there is always the moment I feel a project took off pretty well, and it slows down. It makes you feel you are being idle, makes the achievement made so far in the project insignificant, and scares you that you might not be learning as much as you should be.  It was a bit of anxious downer time for me.</p>
+
+<p>During this time, I was mostly working on 2 issues:</p>
+
+<ul>
+  <li>Creating contribution form for suggested councillors.</li>
+  <li>Creating step by step contribution guide for contributors.</li>
+</ul>
+
+<p>What we want in this project is an easy and accessible way for volunteers to make update the information of local Australian councilors. The minimum information we need to feed PlanningAlerts is a councillor’s name and email, so people can reach out to them to communicate. So we need an input form.</p>
+
+<p>The reason why there needs to be 2 steps for the contribution is that collecting existing councillors’ information is by itself confusing and a lot of work. Before creating this issue, I spent plenty of time contributing councillors’ information following the existing process, and I can tell first hand, it is quite a hassle.</p>
+
+<p>Council websites do not have a standardized layout, and often time where to find information is unclear. Sometimes a council has multiple websites, other times they do not provide individual contact information for the councillors. We did not want to pile up the work of navigating confusing websites for volunteers, who are already willing to do the work of contributing. That’s how the step-by-step contribution guide became important.</p>
+
+<p>Additionally, we needed optional contributor info input form. According to our design principle, it is important for us to be able to acknowledge the work of the contributor by thanking them. At the same time, we are intentionally collecting as little user data as possible, because we value the ownership of private information.</p>
+
+<h2>Creating contribution form for suggested councillors</h2>
+
+<p>I started from creating a contribution form that had one councillor info (one name field and one email field) in a page. At this point, we were following CRUD principle with a SuggestedCouncillor model and controller. It was fairly simple…until we decided to move on to create a contribution form that can submit multiple councillors’ information at once.</p>
+
+<h2>Creating step by step contribution guide for contributors</h2>
+
+<p>Creating the step by step guide by itself was not the most difficult task. Although, these couple of pull request were the ones that manifested the most troubles with distant communication. I learned a lot about good (or better) communication on git and github though navigating the wild pull requests.</p>
+
+<p>Overall, the issues above were so entangled in git, and basically I put myself in the deep trouble of git nightmare. Even trying to write about it makes me feel exhausted. It happened over the course of 3 weeks or so, so I am going to write about it in the next blog post!</p>
+
+  </div>
+
   
-  
-
-
-  <ul class="post-list">
-    
-      <li>
-        
-        <span class="post-meta">Oct 8, 2017</span>
-
-        <h2>
-          <a class="post-link" href="/blog/outreachy/2017/10/08/my-internship-with-Open-Australia-Foundation.html">My Outreachy Internship with Open Australia Foundation</a>
-        </h2>
-      </li>
-    
-      <li>
-        
-        <span class="post-meta">Aug 1, 2017</span>
-
-        <h2>
-          <a class="post-link" href="/blog/outreachy/2017/08/01/week-7-and-8.html">Week 7 and 8</a>
-        </h2>
-      </li>
-    
-      <li>
-        
-        <span class="post-meta">Jul 16, 2017</span>
-
-        <h2>
-          <a class="post-link" href="/blog/outreachy/2017/07/16/week-5-and-6.html">Week 5 and 6</a>
-        </h2>
-      </li>
-    
-      <li>
-        
-        <span class="post-meta">Jul 2, 2017</span>
-
-        <h2>
-          <a class="post-link" href="/blog/outreachy/2017/07/02/week-3-and-4.html">Week 3 and 4</a>
-        </h2>
-      </li>
-    
-      <li>
-        
-        <span class="post-meta">Jun 14, 2017</span>
-
-        <h2>
-          <a class="post-link" href="/blog/outreachy/2017/06/14/week-1-and-2.html">Week 1 and 2</a>
-        </h2>
-      </li>
-    
-      <li>
-        
-        <span class="post-meta">May 17, 2017</span>
-
-        <h2>
-          <a class="post-link" href="/blog/outreachy/2017/05/17/welcome-to-jekyll.html">Hello World!</a>
-        </h2>
-      </li>
-    
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="/blog/feed.xml">via RSS</a></p>
-
-</div>
+</article>
 
       </div>
     </main>

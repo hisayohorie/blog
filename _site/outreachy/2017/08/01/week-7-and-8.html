@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Week 7 and 8</title>
+  <meta name="description" content="And here is another belated blog post! There will be one more backlog blog post coming, and then I am all caught up. As the last blog post, I am writing this...">
+  <link rel="shortcut icon" type="image/png" href="img/pinkcat.png">
+  <link rel="stylesheet" href="/blog/assets/main.css">
+  <link rel="canonical" href="/blog/outreachy/2017/08/01/week-7-and-8.html">
+  <link rel="alternate" type="application/rss+xml" title="blog@hisayo" href="/blog/feed.xml">
+
+  
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="/blog/">blog@hisayo</a>
+
+    
+      <nav class="site-nav">
+        <a href="http://hisayohorie.github.io/website/">Home</a>
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Week 7 and 8</h1>
+    <p class="post-meta">
+      <time datetime="2017-08-01T15:00:53-04:00" itemprop="datePublished">
+        
+        Aug 1, 2017
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>And here is another belated blog post!  There will be one more backlog blog post coming, and then I am all caught up. As the last blog post, I am writing this post in retrospect. <p>
+
+<h2>#gitnightmare</h2>
+
+<p>I think anybody who ever touched git have an episode or two to share under the hashtag.  In this three months, I learned about git as much as coding itself. And some of the biggest lessons came from placing myself in deep git confusion. In this blog post, I want to revisit the mess I created and try to understand what each of the git commands I came across do (and what they <i>actually</i> do).</p>
+
+<h2>Context</h2>
+
+<p>As I mentioned in the previous blog post, there were a couple of weeks when I was not in close touch with my supervisors. I was working on a couple of issues. One was to contribute information about multiple councillors at once.</p>
+
+<img src="/blog/img/multiple_contribution.png" />
+
+<p>First I was looking into the gem called cocoon that enables adding nested forms. We ended up not using this gem because it is javascript dependent, and we wanted to create the form that works in the environment where javascript is not enabled.</p>
+<p>Second, I created a form that uses #edit and #update controller actions. The idea is that every time the user is clicking the “Add more councillor info” button, it makes an edit request for the submission they are making, and adds more councillor information.  To me it felt like the simplest thing to do at the moment, but in reality, the controller is bouncing the submission back and forth between #edit and #update, and at one point it gets too confusing.</p>
+<p>So we decided to only use the #new and #create controller actions. When a user clicks “Add more councilor”, conceptually we are pushing the new councillor info in an array of councillor contribution, and when it is submitted, the items in the array share the same councillor_contribution_id.
+That is one context. I call it an issue A.</p>
+
+
+<p>The other thing I was working on was the issue of creating a step-by-step guide for the councillor information contribution process with a user without technical knowledge in mind. In the github issue page, I drafted out the guide, and we were at the point of discussing  which parts of the guide can be automated.</p>
+<p>The general contribution steps I drafted were:
+  <ul>
+    <li>Google search the council website</li>
+    <li>Find the page with the councillor contact information</li>
+    <li>Copy and paste the councillor’s name and email address</li>
+    <li>Submit the information</li>
+  </ul>
+</p>
+
+<p>It sounds simple enough, yet there are a lot of things that are very specific and need to be very clearly communicated. For example, the name needs to be capitalized only for the beginning of the first name and the last name, and titles like Lord Mayor, Deputy Mayor, Alderman, Cr., should not be included in the submission (also I never knew there are so many titles in the council). In this case, we could use validation to automate the process, yet validation by itself is not enough when we follow our design principle. It is important for the contributor to feel supported and welcomed throughout the process.</p>
+<p>Other possible automation is the very first step in the contribution, to google the council website. Currently, in the csv file where we manage the data of the councilors, there is a  column for the council website. We use the csv_to_popolo gem to convert these data, and we can convert the council website information in json format. That means we can create a directory of council websites that we have kept track of.  Great idea! And this is the issue B.</p>
+
+<p>My first step into the git nightmare is that I branched off from issue A to work on issue B before the issue A pull request was merged. This is part because I did not know what to do while I waited for the review of my issue A pull request, and yet the implementation of issue A is very important in creating a directory of council websites. So I anxiously git checkout –b from the unmerged issue A branch.</p>
+<p>In the issue B branch, I created a haml file for the lengthy step-by-step contribution process. Creating instructions by itself doesn’t require a lot of coding, so I finished writing it relatively smoothly, and then wanted to keep going. So what I did is branch off AGAIN from unmerged issue B branch, and started creating a directory of council websites.</p>
+
+<p>This is the disaster in making diagram:</p>
+
+<img src="/blog/img/gitdisaster.png" />
+
+
+<h2>Lessons learnt:</h2>
+
+<h3>Small commits for pointed Pull Request</h3>
+
+<p>A layer of this git nightmare is that all of my PR had some potion of overlapping commits, and these commits made each PR so massively big. It is true that once the branch A is merged to the master, the commits shared between branch A and branch B would disappear on branch B, and makes the number of commits smaller. However, it is very rare for me to have my PR merged without some back and forth refactoring, and it results in merge conflicts of other branches.</p>
+<p>To avoid this, I learned to make smaller PRs that are targeted to solve explicit single issues. In that way, each PRs are isolated and not dependent on each other.</p>
+<p>Even though every time I think about “target to solve a single issue” it makes me giggle because it makes me think about the famous Audre Lorde quote  “There is no such a thing as a single-issue struggle because we do not live single-issue lives”, which I wholeheartedly agree with, but in the case of github issues, single issue approach is the way to go.</p>
+
+<h3>Good commit messages save you</h3>
+<p>Small commits with explicit commit messages saves life, because when you have to dive into the deep sea of commits, you need to see exactly what you are looking for in very clear message, otherwise you will drown.  I learned this lesson from enough time of git reset, git rebase, and the most definitely in my attempt to git cherry-pick.</p>
+<p>Much more often than I thought, I need to go back to see other PRs and their  commit history, to see the design decision, similar code to learn from, etc. And having a clear commit message helps a lot to find what you are looking for.</p>
+
+<h2>Some git commands I learned better</h2>
+
+<p>I used a lot of git reset, git revert,  and git rebase. I was using it interchangeably to some point, but then I learned more about what each command do and what it is good for.<p>
+
+<h3>Git reset</h3>
+
+<p>Git reset goes back in time of the commit is made. It is a time machine you can go back in time to when everything was going well and you did not make any mistakes. I ended up using a lot of git reset.</p>
+
+<h3>Git revert</h3>
+
+<p>Git revert does the same thing as git reset, except the commit history will show that you used git revert.  In git reset, nobody will know that you might have had 200 commits and decided to roll back the 200 commits, whereas in git revert, it will make a commit says “Reverted “all my 200 commits now I want to cancel””.</p>
+
+<h3>Git rebase</h3>
+
+<p>Git rebase confused me for quite a bit. From what I understand, git rebase combines the commits in 2 different branches. What git rebase does is essentially the same as git merge. The difference of git rebase and git merge is that you get to write commit messages in retrospect. </p>
+<p>When you merge a branch, there will be a clear commit that indicates you merged the branch with another branch. In case of git rebase, git will prompt you to create new commits which replace the original commits (both from your working branch and the other branch you are rebasing too). So it is entirely possible to pretend like you worked on these commits in one branch, and cannot differentiate which commits are from which branch.</p>
+
+<h2>Git history revisionist (not in a bad way)</h2>
+
+<p>For me it helps to think of git reset and git revert as a pair, also git rebase and git merge as another pair. In both cases, the commit history differentiates one from the other. Git reset and git rebase are like history revisionist of the git revert and git merge, because former group will let you write commit message in retrospect, and do not leave an evidence that once the version of the branch was farther ahead in different direction. Whereas git revert and git merge, there will be a commit that clearly indicates the commit was reverted and the branch was merged.</p>
+<p>I ended up using a lot of git rebase because I liked the sense of starting over with clearer vision and leaving the messy commits behind. Probably git revert is one step more transparent in the version control.</p>
+
+<p>Although I am using the term history revisionist in a bit of sarcastic humor, I do not want to throw a shade on git reset and git rebase. There are cases that the git history revision is beneficial. </p>
+<p>For example, there is a time you need to git commit not because you moved forward but because you just have to, such as, going for lunch, your laptop is about to die and you have no charger etc. In my case, I needed to make a lot of commit because my test was failing only on Travis CI when I pushed commit, but not locally. I made numbers of commits with messages like “testing if Travis CI passes this test without variables” “Deleting the id from this table to see if travis CI will give a different error” “Changing order of unit tests to see if Travis is acting up because of randomized order”. </p>
+<p>After solving the problem, those commits are not necessary, so I can git rebase those commits to write commit messages in retrospect.</p>
+
+<h3>Lessons learnt:</h3>
+<ul>
+  <li>Small commits for pointed Pull Request</li>
+  <li>Good commit messages saves you</li>
+  <li>Using git reset, git revert, and git rebase when things go wrong</li>
+</ul>
+
+
+<p>I tried my best to describe my git journey here, but it is a confusing thing by nature.  For next post I will write more about our project progress and learning web scraping!</p>
+</p></p></p></p>
+
+  </div>
+
+  
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">blog@hisayo</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              blog@hisayo
+            
+            </li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/hisayohorie"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">hisayohorie</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/orieisao"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">orieisao</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>A cat with wet paws.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
